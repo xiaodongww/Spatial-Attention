@@ -188,7 +188,7 @@ class ResNet(nn.Module):
         x_layer3 = x_layer3.contiguous().view(x_layer3.size(0), -1)
         x_layer3 = self.instance_layer3(x_layer3)
 # Part-Level Feature
-        sx = x.size(2)/6
+        sx = int(x.size(2)/6)
         kx = x.size(2)-sx*5
         x = F.avg_pool2d(x,kernel_size=(kx,x.size(3)),stride=(sx,x.size(3)))   # H4 W8
 

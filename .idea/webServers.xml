@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="390aacfc-d74b-41c3-947c-4fbf3ae31d8d" name="spatial_attention_019" url="http://127.0.0.1">
+        <fileTransfer host="127.0.0.1" port="6000" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="6000" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="dd88d638-0f7c-4fd5-9b16-e2a90a010199" name="spatial_attention_041" url="http://127.0.0.1">
+        <fileTransfer host="127.0.0.1" port="6041" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="6041" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
