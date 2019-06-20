@@ -25,6 +25,11 @@ class CSM(object):
 
     def __init__(self, root='/home/haoluo/data', verbose=True, **kwargs):
         super(CSM, self).__init__()
+        self.images_dir = osp.join(root)
+        self.train_path = 'train_bbox'
+        self.gallery_path = 'val_bbox'
+        self.query_path = 'val_bbox'
+
         self.root = root
         self.train_dir = osp.join(root, 'train_bbox')
         self.query_dir = osp.join(root, 'val_bbox')
@@ -35,10 +40,6 @@ class CSM(object):
         train = self._process_dir(self.train_dir, relabel=True, is_train=True)
         query = self._process_dir(self.query_dir, relabel=False, is_train=False)
         gallery = self._process_dir(self.gallery_dir, relabel=False, is_train=False)
-
-        if verbose:
-            print("=> Market1501 loaded")
-            self.print_dataset_statistics(train, query, gallery)
 
         self.train = train
         self.query = query
@@ -83,5 +84,19 @@ class CSM(object):
             pid, movie_id, _, _ = img_name.split('_')
             if relabel:
                 pid = pid2label[pid]
-            dataset.append((img_path, pid, movie_id))
+            relevant_img_path = '/'.join(img_path.split('/')[-3:])
+            # dataset.append((img_path, pid, movie_id))
+            dataset.append((relevant_img_path, pid, movie_id))
         return dataset
+
+    def get_imagedata_info(self, data):
+        pids, cams = [], []
+        for _, pid, camid in data:
+            pids += [pid]
+            cams += [camid]
+        pids = set(pids)
+        cams = set(cams)
+        num_pids = len(pids)
+        num_cams = len(cams)
+        num_imgs = len(data)
+        return num_pids, num_imgs, num_cams

@@ -7,6 +7,8 @@ import torch
 from torch import nn
 from torch.backends import cudnn
 from torch.utils.data import DataLoader
+import os
+
 
 from reid import datasets
 from reid import models
@@ -21,6 +23,8 @@ from reid.utils.serialization import load_checkpoint, save_checkpoint
 This is the code for paper 'parameter-free spatial attention network for Person Re-Identification'
 Our code is mainly based on PCB 
 '''
+
+
 def get_data(name, data_dir, height, width, batch_size, workers):
     root = osp.join(data_dir, name)
     root = data_dir
@@ -133,7 +137,7 @@ def main(args):
                                 nesterov=True)
     # optimizer = torch.optim.Adam(param_groups,lr=args.lr)
     # Trainer
-    trainer = Trainer(model, criterion, 0, 0, SMLoss_mode=0)
+    trainer = Trainer(model, criterion, 0, 0, SMLoss_mode=0, output_dir=args.logs_dir)
 
     # Schedule learning rate
     def adjust_lr(epoch):

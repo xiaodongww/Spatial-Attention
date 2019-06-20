@@ -74,7 +74,8 @@ class ResNet(nn.Module):
                 mo.stride = (1,1)
 
         self.num_features = num_features
-        self.num_classes = 751 #num_classes to be changed according to dataset
+        # self.num_classes = 751 #num_classes to be changed according to dataset
+        self.num_classes = num_classes #num_classes to be changed according to dataset
         self.dropout = dropout
         out_planes = self.base.fc.in_features
         self.local_conv = nn.Conv2d(out_planes, self.num_features, kernel_size=1,padding=0,bias=False)
