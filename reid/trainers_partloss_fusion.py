@@ -39,7 +39,7 @@ class BaseTrainer(object):
             # for i in range(24):
             #     loss = loss + losses[i]
             # loss = loss / 24
-            losses.update(loss.data[0], targets.size(0))
+            losses.update(loss.data.item(), targets.size(0))
             precisions.update(prec1, targets.size(0))
 
             optimizer.zero_grad()
@@ -119,12 +119,12 @@ class Trainer(BaseTrainer):
             loss23 = self.criterion(outputs[1][23],targets)
 
             prec, = accuracy(outputs[1][2].data, targets.data)
-            prec = prec[0]
+            prec = prec.item()
                         
         elif isinstance(self.criterion, OIMLoss):
             loss, outputs = self.criterion(outputs, targets)
             prec, = accuracy(outputs.data, targets.data)
-            prec = prec[0]
+            prec = prec.item()
         elif isinstance(self.criterion, TripletLoss):
             loss, prec = self.criterion(outputs, targets)
         else:
