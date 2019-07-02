@@ -18,6 +18,14 @@
           <option name="port" value="6041" />
         </fileTransfer>
       </webServer>
+      <webServer id="69258acd-7789-464e-b80d-c890e37965d4" name="spatial_attention_19" url="http://10.29.150.19">
+        <fileTransfer host="10.29.150.19" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

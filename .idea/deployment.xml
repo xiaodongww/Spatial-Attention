@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="spatial_attention_041">
+  <component name="PublishConfigData" autoUpload="Always" serverName="spatial_attention_019">
     <serverData>
       <paths name="spatial_attention_019">
         <serverdata>
@@ -13,6 +13,13 @@
         <serverdata>
           <mappings>
             <mapping deploy="/home/data/public/wuxiaodong/workspace/Spatial-Attention" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="spatial_attention_19">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/wuxiaodong/workspace/Spatial-Attention" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
