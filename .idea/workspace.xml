@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d08c661a-a23c-48c1-a995-784b2116073c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/reid/trainers_partloss.py" beforeDir="false" afterPath="$PROJECT_DIR$/reid/trainers_partloss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reid/trainers_partloss_4stage.py" beforeDir="false" afterPath="$PROJECT_DIR$/reid/trainers_partloss_4stage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reid/trainers_partloss_fusion.py" beforeDir="false" afterPath="$PROJECT_DIR$/reid/trainers_partloss_fusion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluate_market1501.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_market1501.sh" beforeDir="false" afterPath="$PROJECT_DIR$/train_market1501.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -29,8 +25,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train_market1501.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="79" lean-forward="true" selection-start-line="1" selection-start-column="79" selection-end-line="1" selection-end-column="79" />
+            <state relative-caret-position="45">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/evaluate_market1501.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -87,18 +92,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reid/datasets/csm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-              <folding>
-                <element signature="e#101#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reid/datasets/market.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -133,7 +126,6 @@
       <find>save</find>
       <find>logs_dir</find>
       <find>criterion</find>
-      <find>epoch</find>
       <find>loss.log</find>
       <find>loss.</find>
       <find>Processing</find>
@@ -156,6 +148,7 @@
       <find>prec = prec[0]</find>
       <find>[0]</find>
       <find>loss.data[0]</find>
+      <find>epoch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,10 +165,11 @@
         <option value="$PROJECT_DIR$/reid/datasets/csm.py" />
         <option value="$PROJECT_DIR$/reid/models/reSAnet.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/train_market1501.sh" />
         <option value="$PROJECT_DIR$/reid/trainers_partloss.py" />
         <option value="$PROJECT_DIR$/reid/trainers_partloss_4stage.py" />
         <option value="$PROJECT_DIR$/reid/trainers_partloss_fusion.py" />
+        <option value="$PROJECT_DIR$/train_market1501.sh" />
+        <option value="$PROJECT_DIR$/evaluate_market1501.sh" />
       </list>
     </option>
   </component>
@@ -195,6 +189,11 @@
             <path>
               <item name="Spatial-Attention" type="b2602c69:ProjectViewProjectNode" />
               <item name="Spatial-Attention" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spatial-Attention" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spatial-Attention" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -237,12 +236,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560933103033</updated>
       <workItem from="1560933105866" duration="9987000" />
-      <workItem from="1561906471569" duration="4464000" />
+      <workItem from="1561906471569" duration="11281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14451000" />
+    <option name="totallyTimeSpent" value="21268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -419,16 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reid/feature_extraction/cnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -446,6 +435,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/reid/trainers_partloss_fusion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reid/trainers_partloss_4stage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -456,17 +452,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reid/trainers_partloss_fusion.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="210">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluate_market1501.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train_market1501.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="79" lean-forward="true" selection-start-line="1" selection-start-column="79" selection-end-line="1" selection-end-column="79" />
+        <state relative-caret-position="45">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
