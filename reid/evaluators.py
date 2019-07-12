@@ -35,7 +35,6 @@ def extract_features(model, data_loader, print_freq=10):
                   .format(i + 1, len(data_loader),
                           batch_time.val, batch_time.avg,
                           data_time.val, data_time.avg))
-
     return features, labels,features_list
 
 
@@ -47,7 +46,6 @@ def pairwise_distance(query_features, gallery_features, query=None, gallery=None
         dist = torch.pow(x, 2).sum(1) * 2
         dist = dist.expand(n, n) - 2 * torch.mm(x, x.t())
         return dist
-
     x = torch.cat([query_features[f].unsqueeze(0) for f, _, _ in query], 0)
     y = torch.cat([gallery_features[f].unsqueeze(0) for f, _, _ in gallery], 0)
     m, n = x.size(0), y.size(0)

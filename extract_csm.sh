@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#python main.py -d market -b 48 -j 4 --log logs/market_authors/ --combine-trainval --step-size 40 --data-dir ./data/market1501 --resume logs/market_authors/checkpoint.pth.tar --evaluate
+export CUDA_VISIBLE_DEVICES=1 && python extract_feature.py -d csm -b 48 -j 4 --log logs/widerface/ --combine-trainval --step-size 40 --data-dir ./data/wider_face_person_search --resume logs/widerface/model_best.pth.tar

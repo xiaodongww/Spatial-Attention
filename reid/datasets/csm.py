@@ -63,7 +63,7 @@ class CSM(object):
 
     def _process_dir(self, dir_path, relabel=False, is_train=True):
         img_paths = []
-        for movie_dir in os.listdir(dir_path):
+        for movie_dir in sorted(os.listdir(dir_path)):
             image_dir = os.path.join(dir_path, '{}/candidates'.format(movie_dir))
             img_paths_part = glob.glob(osp.join(image_dir, 'nm*.jpg'))
             img_paths.extend(img_paths_part)

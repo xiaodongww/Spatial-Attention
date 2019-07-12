@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 from .duke import Duke
 from .market import Market
+from .read_data_json import JsonDataset
 from .csm import CSM
 
 

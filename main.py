@@ -18,7 +18,6 @@ from reid.utils.data import transforms as T
 from reid.utils.data.preprocessor import Preprocessor
 from reid.utils.logging import Logger
 from reid.utils.serialization import load_checkpoint, save_checkpoint
-
 '''
 This is the code for paper 'parameter-free spatial attention network for Person Re-Identification'
 Our code is mainly based on PCB 
@@ -109,7 +108,6 @@ def main(args):
               .format(start_epoch, best_top1))
 
     model = nn.DataParallel(model).cuda()
-
 
     # Evaluator
     evaluator = Evaluator(model)
